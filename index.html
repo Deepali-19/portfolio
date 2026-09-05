@@ -218,9 +218,9 @@
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[550px] gradient-glow pointer-events-none z-0"></div>
 
     <!-- =========================================================================
-         1. FLOATING NAVIGATION (High-Contrast Links & Theme Toggle)
+         1. FLOATING NAVIGATION (Auto-Hides When Scrolling Down, Visible at Start)
          ========================================================================= -->
-    <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
+    <header id="mainNavHeader" class="fixed top-5 inset-x-0 z-50 flex justify-center px-4 transition-all duration-300 ease-in-out">
         <nav class="glass-nav theme-nav border px-5 py-2.5 rounded-full flex items-center gap-6 transition-all">
             
             <!-- Brand Logo -->
@@ -318,15 +318,17 @@
                 </div>
             </div>
 
-            <!-- Hero Portrait Card (New Formal Portrait) -->
+            <!-- Hero Portrait Card (Crystal-Clear Text Overlay in Both Light & Dark Modes) -->
             <div class="w-64 sm:w-72 lg:w-80 shrink-0">
                 <div class="relative p-2.5 rounded-2xl theme-card border" data-tilt data-tilt-max="7" data-tilt-speed="400">
                     <div class="relative rounded-xl overflow-hidden aspect-[4/5] bg-slate-900 border border-black/5 dark:border-white/5">
                         <img src="assets/images/profile_new.jpg" alt="Deepali Singh" class="w-full h-full object-cover object-top filter contrast-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-3.5 left-3.5 right-3.5 text-left">
-                            <p class="text-[11px] font-mono text-brand-300 font-bold uppercase tracking-wider">B.Tech CSE &bull; Lateral Entry</p>
-                            <p class="text-xs font-bold text-white">Lovely Professional University</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none"></div>
+                        
+                        <!-- High-Contrast Frosted Badge Overlay -->
+                        <div class="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/15 text-left space-y-0.5 shadow-xl">
+                            <p class="text-[10px] font-mono font-bold uppercase tracking-wider text-indigo-300">B.Tech CSE &bull; Lateral Entry</p>
+                            <p class="text-xs font-bold text-white tracking-tight">Lovely Professional University</p>
                         </div>
                     </div>
                 </div>
@@ -334,7 +336,7 @@
         </section>
 
         <!-- =========================================================================
-             3. STATS & HIGHLIGHTS BENTO GRID (High-Contrast Numbers & Labels)
+             3. STATS & HIGHLIGHTS BENTO GRID
              ========================================================================= -->
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="p-5 rounded-2xl theme-card border text-center space-y-1">
@@ -915,8 +917,18 @@
         </a>
     </footer>
 
-    <!-- Interactive Scripts: Typewriter, Theme Switcher, Category Filters, Certificate Lightbox -->
+    <!-- Interactive Scripts -->
     <script>
+        // Auto-Hide Navbar on Scroll (Visible only at the top/starting position)
+        const navHeader = document.getElementById("mainNavHeader");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 60) {
+                navHeader.classList.add("-translate-y-24", "opacity-0", "pointer-events-none");
+            } else {
+                navHeader.classList.remove("-translate-y-24", "opacity-0", "pointer-events-none");
+            }
+        }, { passive: true });
+
         // Certificate Lightbox
         function openCertModal(src, caption) {
             document.getElementById('certModalImg').src = src;
