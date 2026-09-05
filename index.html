@@ -45,13 +45,13 @@
 
     <style>
         /* =========================================================================
-           THEME STYLES: DARK MODE & CHALK WHITE LIGHT MODE WITH SOFT NON-DARK SHADOWS
+           THEME STYLES: 100% HIGH-CONTRAST LIGHT & DARK MODES
            ========================================================================= */
         
         /* DARK MODE DEFAULTS */
         html.dark body {
-            background-color: #090a0f;
-            color: #f1f5f9;
+            background-color: #090a0f !important;
+            color: #f1f5f9 !important;
         }
         html.dark .bg-grid-check {
             background-size: 32px 32px;
@@ -60,78 +60,84 @@
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
         }
         html.dark .theme-card {
-            background-color: #11131a;
-            border-color: #1e2230;
-            color: #f1f5f9;
+            background-color: #11131a !important;
+            border-color: #1e2230 !important;
+            color: #f1f5f9 !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
         }
         html.dark .theme-card:hover {
-            border-color: #31374a;
+            border-color: #31374a !important;
         }
         html.dark .theme-nav {
-            background: rgba(17, 19, 26, 0.85);
-            border-color: #1e2230;
+            background: rgba(17, 19, 26, 0.85) !important;
+            border-color: #1e2230 !important;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         }
         html.dark .theme-text-primary {
-            color: #ffffff;
+            color: #ffffff !important;
         }
         html.dark .theme-text-secondary {
-            color: #94a3b8;
+            color: #cbd5e1 !important;
+        }
+        html.dark .theme-text-muted {
+            color: #94a3b8 !important;
         }
         html.dark .theme-subtle-box {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.08);
-            color: #e2e8f0;
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            color: #e2e8f0 !important;
         }
         html.dark .theme-border-divide {
-            border-color: #1e2230;
+            border-color: #1e2230 !important;
         }
         html.dark .gradient-glow {
             background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 70%);
         }
 
-        /* LIGHT MODE: CHALK WHITE CANVAS WITH LIGHT GREY CHECK GRID & SOFT NON-DARK SHADOWS */
+        /* LIGHT MODE: CHALK WHITE CANVAS WITH HIGH-CONTRAST DEEP CHARCOAL TEXT */
         html:not(.dark) body {
-            background-color: #FAF9F6;
-            color: #0f172a;
+            background-color: #FAF9F6 !important;
+            color: #0f172a !important;
         }
         html:not(.dark) .bg-grid-check {
             background-size: 28px 28px;
             background-image: 
-                linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+                linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
         }
         html:not(.dark) .theme-card {
-            background-color: #FFFFFF;
-            border-color: #E2E8F0;
-            color: #0f172a;
-            /* Soft, airy non-dark shadow with subtle lavender/indigo tint */
-            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.06), 0 4px 10px -2px rgba(148, 163, 184, 0.1);
+            background-color: #FFFFFF !important;
+            border-color: #E2E8F0 !important;
+            color: #0f172a !important;
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.08), 0 4px 10px -2px rgba(148, 163, 184, 0.15) !important;
         }
         html:not(.dark) .theme-card:hover {
-            border-color: #CBD5E1;
-            box-shadow: 0 14px 30px -5px rgba(99, 102, 241, 0.1), 0 6px 14px -2px rgba(148, 163, 184, 0.14);
+            border-color: #CBD5E1 !important;
+            box-shadow: 0 14px 30px -5px rgba(99, 102, 241, 0.12), 0 6px 14px -2px rgba(148, 163, 184, 0.18) !important;
         }
         html:not(.dark) .theme-nav {
-            background: rgba(255, 255, 255, 0.92);
-            border-color: #E2E8F0;
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.08), 0 2px 8px rgba(148, 163, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95) !important;
+            border-color: #E2E8F0 !important;
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.08), 0 2px 8px rgba(148, 163, 184, 0.12) !important;
         }
         html:not(.dark) .theme-text-primary {
-            color: #020617;
+            color: #090a0f !important;
         }
         html:not(.dark) .theme-text-secondary {
-            color: #475569;
+            color: #1e293b !important;
+        }
+        html:not(.dark) .theme-text-muted {
+            color: #475569 !important;
         }
         html:not(.dark) .theme-subtle-box {
-            background-color: #F8FAFC;
-            border-color: #E2E8F0;
-            color: #334155;
-            box-shadow: 0 1px 3px rgba(148, 163, 184, 0.08);
+            background-color: #F1F5F9 !important;
+            border-color: #CBD5E1 !important;
+            color: #0f172a !important;
+            font-weight: 500 !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
         }
         html:not(.dark) .theme-border-divide {
-            border-color: #E2E8F0;
+            border-color: #E2E8F0 !important;
         }
         html:not(.dark) .gradient-glow {
             background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08), transparent 70%);
@@ -194,14 +200,14 @@
             box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
         }
         html:not(.dark) .filter-btn:not(.active) {
-            background-color: #ffffff;
-            color: #475569;
-            border-color: #e2e8f0;
+            background-color: #ffffff !important;
+            color: #1e293b !important;
+            border-color: #cbd5e1 !important;
         }
         html.dark .filter-btn:not(.active) {
-            background-color: #11131a;
-            color: #94a3b8;
-            border-color: #1e2230;
+            background-color: #11131a !important;
+            color: #94a3b8 !important;
+            border-color: #1e2230 !important;
         }
     </style>
 </head>
@@ -212,7 +218,7 @@
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[550px] gradient-glow pointer-events-none z-0"></div>
 
     <!-- =========================================================================
-         1. FLOATING NAVIGATION (Contact option removed from tab)
+         1. FLOATING NAVIGATION (High-Contrast Links & Theme Toggle)
          ========================================================================= -->
     <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
         <nav class="glass-nav theme-nav border px-5 py-2.5 rounded-full flex items-center gap-6 transition-all">
@@ -223,8 +229,8 @@
                 <span>Deepali Singh</span>
             </a>
 
-            <!-- Nav Links (About, Experience, Projects, Education, Skills) -->
-            <div class="hidden md:flex items-center gap-1 text-sm font-medium theme-text-secondary">
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center gap-1 text-sm font-semibold theme-text-secondary">
                 <a href="#about" class="px-3.5 py-1 rounded-full hover:text-brand-500 hover:bg-black/5 dark:hover:bg-white/5 transition-all">About</a>
                 <a href="#experience" class="px-3.5 py-1 rounded-full hover:text-brand-500 hover:bg-black/5 dark:hover:bg-white/5 transition-all">Experience</a>
                 <a href="#projects" class="px-3.5 py-1 rounded-full hover:text-brand-500 hover:bg-black/5 dark:hover:bg-white/5 transition-all">Projects</a>
@@ -238,7 +244,7 @@
                 <!-- Theme Toggle Button (Light ☀️ / Dark 🌙) -->
                 <button id="themeToggle" class="w-8 h-8 rounded-full theme-subtle-box border flex items-center justify-center hover:scale-105 transition-all text-xs" title="Toggle Theme">
                     <i class="fas fa-sun hidden dark:block text-amber-400"></i>
-                    <i class="fas fa-moon dark:hidden text-slate-700"></i>
+                    <i class="fas fa-moon dark:hidden text-slate-800"></i>
                 </button>
 
                 <!-- CV Download Badge -->
@@ -260,11 +266,11 @@
             <div class="flex-1 space-y-6 text-center lg:text-left">
                 
                 <!-- Status Badge -->
-                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full theme-card border text-xs font-medium theme-text-secondary">
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full theme-card border text-xs font-semibold theme-text-secondary">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 live-pulse"></span>
                     <span>Punjab, India</span>
                     <span class="opacity-40">&bull;</span>
-                    <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Available for Opportunities</span>
+                    <span class="text-emerald-600 dark:text-emerald-400 font-bold">Available for Opportunities</span>
                 </div>
 
                 <!-- Main Hero Titles with Dynamic Cycling Typing Effect -->
@@ -272,25 +278,25 @@
                     <h1 class="text-4xl sm:text-6xl font-extrabold theme-text-primary tracking-tight leading-[1.1]">
                         Deepali Singh
                     </h1>
-                    <div class="text-xl sm:text-2xl font-semibold text-brand-500 dark:text-brand-400 min-h-[36px] flex items-center justify-center lg:justify-start">
+                    <div class="text-xl sm:text-2xl font-bold text-brand-600 dark:text-brand-400 min-h-[36px] flex items-center justify-center lg:justify-start">
                         <span id="typewriter"></span><span class="cursor-blink"></span>
                     </div>
                 </div>
 
                 <!-- Intro Paragraph -->
-                <p class="text-base sm:text-lg theme-text-secondary font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Computer Science undergraduate at <strong class="theme-text-primary">Lovely Professional University (LPU)</strong> building practical solutions across <strong class="theme-text-primary">Applied Machine Learning</strong>, <strong class="theme-text-primary">Computer Vision (MediaPipe)</strong>, and <strong class="theme-text-primary">Native Android (Kotlin)</strong> architectures.
+                <p class="text-base sm:text-lg theme-text-secondary font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Computer Science undergraduate at <strong class="theme-text-primary font-bold">Lovely Professional University (LPU)</strong> building practical solutions across <strong class="theme-text-primary font-bold">Applied Machine Learning</strong>, <strong class="theme-text-primary font-bold">Computer Vision (MediaPipe)</strong>, and <strong class="theme-text-primary font-bold">Native Android (Kotlin)</strong> architectures.
                 </p>
 
                 <!-- Action Buttons -->
                 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                    <a href="#contact" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition-all shadow-lg shadow-brand-500/25 flex items-center gap-2">
+                    <a href="#contact" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm transition-all shadow-lg shadow-brand-500/25 flex items-center gap-2">
                         Get in Touch <i class="fas fa-arrow-right text-xs"></i>
                     </a>
-                    <a href="documents/resume.html" target="_blank" class="px-5 py-3 rounded-xl theme-card border theme-text-primary font-medium text-sm transition-all flex items-center gap-2">
+                    <a href="documents/resume.html" target="_blank" class="px-5 py-3 rounded-xl theme-card border theme-text-primary font-semibold text-sm transition-all flex items-center gap-2">
                         <i class="fas fa-file-lines text-xs text-brand-500"></i> View PDF Resume
                     </a>
-                    <a href="documents/Deepali_Singh_Resume.docx" download class="px-4 py-3 rounded-xl theme-subtle-box border font-medium text-xs transition-all flex items-center gap-1.5">
+                    <a href="documents/Deepali_Singh_Resume.docx" download class="px-4 py-3 rounded-xl theme-subtle-box border font-semibold text-xs transition-all flex items-center gap-1.5">
                         <i class="fas fa-download text-xs"></i> .DOCX
                     </a>
                 </div>
@@ -306,20 +312,20 @@
                     <a href="mailto:deepalis1003@gmail.com" class="hover:text-brand-500 transition-colors" title="Direct Email">
                         <i class="fas fa-envelope text-lg"></i>
                     </a>
-                    <a href="tel:+9191119152143" class="hover:text-brand-500 transition-colors text-xs font-mono font-medium" title="Call Deepali">
+                    <a href="tel:+9191119152143" class="hover:text-brand-500 transition-colors text-xs font-mono font-bold" title="Call Deepali">
                         <i class="fas fa-phone mr-1"></i> +91 911191 - 52143
                     </a>
                 </div>
             </div>
 
-            <!-- Hero Portrait Card -->
+            <!-- Hero Portrait Card (New Formal Portrait) -->
             <div class="w-64 sm:w-72 lg:w-80 shrink-0">
                 <div class="relative p-2.5 rounded-2xl theme-card border" data-tilt data-tilt-max="7" data-tilt-speed="400">
                     <div class="relative rounded-xl overflow-hidden aspect-[4/5] bg-slate-900 border border-black/5 dark:border-white/5">
                         <img src="assets/images/profile_new.jpg" alt="Deepali Singh" class="w-full h-full object-cover object-top filter contrast-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
                         <div class="absolute bottom-3.5 left-3.5 right-3.5 text-left">
-                            <p class="text-[11px] font-mono text-brand-300 font-semibold uppercase tracking-wider">B.Tech CSE &bull; Lateral Entry</p>
+                            <p class="text-[11px] font-mono text-brand-300 font-bold uppercase tracking-wider">B.Tech CSE &bull; Lateral Entry</p>
                             <p class="text-xs font-bold text-white">Lovely Professional University</p>
                         </div>
                     </div>
@@ -328,24 +334,24 @@
         </section>
 
         <!-- =========================================================================
-             3. STATS & HIGHLIGHTS BENTO GRID
+             3. STATS & HIGHLIGHTS BENTO GRID (High-Contrast Numbers & Labels)
              ========================================================================= -->
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="p-5 rounded-2xl theme-card border text-center space-y-1">
                 <p class="text-3xl font-extrabold theme-text-primary">10+</p>
-                <p class="text-xs font-medium theme-text-secondary">Public Repositories</p>
+                <p class="text-xs font-bold theme-text-secondary">Public Repositories</p>
             </div>
             <div class="p-5 rounded-2xl theme-card border text-center space-y-1">
                 <p class="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">94%+</p>
-                <p class="text-xs font-medium theme-text-secondary">AI Posture Accuracy</p>
+                <p class="text-xs font-bold theme-text-secondary">AI Posture Accuracy</p>
             </div>
             <div class="p-5 rounded-2xl theme-card border text-center space-y-1">
                 <p class="text-3xl font-extrabold text-brand-600 dark:text-brand-400">5 Mos</p>
-                <p class="text-xs font-medium theme-text-secondary">Industry Internship</p>
+                <p class="text-xs font-bold theme-text-secondary">Industry Internship</p>
             </div>
             <div class="p-5 rounded-2xl theme-card border text-center space-y-1">
                 <p class="text-3xl font-extrabold text-amber-600 dark:text-amber-400">1st Div</p>
-                <p class="text-xs font-medium theme-text-secondary">Diploma in CSE (LPU)</p>
+                <p class="text-xs font-bold theme-text-secondary">Diploma in CSE (LPU)</p>
             </div>
         </section>
 
@@ -354,41 +360,41 @@
              ========================================================================= -->
         <section id="about" class="space-y-6 pt-4 border-t theme-border-divide">
             <div class="space-y-1">
-                <span class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Background</span>
-                <h2 class="text-2xl sm:text-3xl font-bold theme-text-primary tracking-tight">About Me</h2>
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Background</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold theme-text-primary tracking-tight">About Me</h2>
             </div>
 
             <div class="grid lg:grid-cols-12 gap-8 theme-text-secondary text-base leading-relaxed">
                 <div class="lg:col-span-8 space-y-4">
                     <p>
-                        I am a Computer Science undergraduate at <strong class="theme-text-primary font-semibold">Lovely Professional University (LPU)</strong>, admitted via Lateral Entry after completing my <strong class="theme-text-primary font-semibold">Diploma in Computer Science &amp; Engineering with First Division</strong>.
+                        I am a Computer Science undergraduate at <strong class="theme-text-primary font-bold">Lovely Professional University (LPU)</strong>, admitted via Lateral Entry after completing my <strong class="theme-text-primary font-bold">Diploma in Computer Science &amp; Engineering with First Division</strong>.
                     </p>
                     <p>
-                        My work bridges deep algorithmic problem-solving with practical software execution. I specialize in building real-time computer vision engines with <strong class="text-brand-500 font-semibold">MediaPipe &amp; LSTM neural networks</strong>, and engineering clean, scalable mobile applications in <strong class="text-brand-500 font-semibold">Kotlin</strong> adopting modern Android Jetpack, Room SQLite, and MVVM architectures.
+                        My work bridges deep algorithmic problem-solving with practical software execution. I specialize in building real-time computer vision engines with <strong class="text-brand-600 dark:text-brand-400 font-bold">MediaPipe &amp; LSTM neural networks</strong>, and engineering clean, scalable mobile applications in <strong class="text-brand-600 dark:text-brand-400 font-bold">Kotlin</strong> adopting modern Android Jetpack, Room SQLite, and MVVM architectures.
                     </p>
                     <p>
-                        Previously, I completed a 5-month internship as an <strong class="theme-text-primary font-semibold">Android App Developer Intern</strong> at Software Services And Solutions (SSS Patna) and earned a <strong class="text-emerald-600 dark:text-emerald-400 font-semibold">Grade ‘A’</strong> merit certification in Applied AI &amp; Machine Learning from LPU CPE.
+                        Previously, I completed a 5-month internship as an <strong class="theme-text-primary font-bold">Android App Developer Intern</strong> at Software Services And Solutions (SSS Patna) and earned a <strong class="text-emerald-600 dark:text-emerald-400 font-bold">Grade ‘A’</strong> merit certification in Applied AI &amp; Machine Learning from LPU CPE.
                     </p>
                 </div>
 
                 <div class="lg:col-span-4 p-5 rounded-2xl theme-card border space-y-4 text-xs font-mono">
                     <p class="theme-text-primary font-bold uppercase tracking-wider">Quick Highlights</p>
-                    <div class="space-y-2.5 theme-text-secondary">
+                    <div class="space-y-2.5 theme-text-secondary font-medium">
                         <div class="flex items-center gap-2">
                             <i class="fas fa-graduation-cap text-brand-500 w-4"></i>
-                            <span>B.Tech CSE (Lateral Entry)</span>
+                            <span class="font-bold">B.Tech CSE (Lateral Entry)</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-award text-amber-500 w-4"></i>
-                            <span>Diploma CSE (First Division)</span>
+                            <span class="font-bold">Diploma CSE (First Division)</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-building text-emerald-500 w-4"></i>
-                            <span>SSS Patna (5 Mos Intern)</span>
+                            <span class="font-bold">SSS Patna (5 Mos Intern)</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-brain text-indigo-500 w-4"></i>
-                            <span>Grade ‘A’ Applied AI Merit</span>
+                            <span class="font-bold">Grade ‘A’ Applied AI Merit</span>
                         </div>
                     </div>
                 </div>
@@ -400,8 +406,8 @@
              ========================================================================= -->
         <section id="experience" class="space-y-8 pt-4 border-t theme-border-divide">
             <div class="space-y-1">
-                <span class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Career</span>
-                <h2 class="text-2xl sm:text-3xl font-bold theme-text-primary tracking-tight">Experience &amp; Training</h2>
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Career</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold theme-text-primary tracking-tight">Experience &amp; Training</h2>
             </div>
 
             <div class="space-y-6">
@@ -421,32 +427,32 @@
                                     Certificate
                                 </span>
                             </div>
-                            <p class="text-[11px] font-mono text-center theme-text-secondary">Cert No: SSS/2026/451</p>
+                            <p class="text-[11px] font-mono text-center font-semibold theme-text-muted">Cert No: SSS/2026/451</p>
                         </div>
 
                         <!-- Main Content -->
                         <div class="flex-1 space-y-3 w-full">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                                 <div>
-                                    <h3 class="text-lg font-bold theme-text-primary">Android App Developer Intern</h3>
-                                    <p class="text-xs font-semibold text-brand-500">Software Services And Solutions (SSS Patna)</p>
+                                    <h3 class="text-lg font-extrabold theme-text-primary">Android App Developer Intern</h3>
+                                    <p class="text-xs font-bold text-brand-600 dark:text-brand-400">Software Services And Solutions (SSS Patna)</p>
                                 </div>
-                                <span class="text-xs font-mono theme-subtle-box border px-3 py-1 rounded-full self-start sm:self-auto font-medium">
+                                <span class="text-xs font-mono theme-subtle-box border px-3 py-1 rounded-full self-start sm:self-auto font-bold">
                                     Jan’ 26 – May’ 26 &bull; 5 Mos
                                 </span>
                             </div>
 
-                            <ul class="space-y-2 text-sm theme-text-secondary list-disc list-inside leading-relaxed">
+                            <ul class="space-y-2 text-sm theme-text-secondary font-medium list-disc list-inside leading-relaxed">
                                 <li>Developed modular native Android applications using Kotlin and MVVM architectural patterns.</li>
                                 <li>Integrated RESTful APIs and Room SQLite database persistence, improving client-side data retrieval efficiency by 35%.</li>
                                 <li>Implemented robust unit test suites and resolved critical UI rendering bottlenecks across diverse Android OS versions.</li>
                             </ul>
 
                             <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Kotlin</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">MVVM</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Room DB</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">REST APIs</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Kotlin</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">MVVM</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Room DB</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">REST APIs</span>
                             </div>
                         </div>
 
@@ -468,32 +474,32 @@
                                     Grade ‘A’
                                 </span>
                             </div>
-                            <p class="text-[11px] font-mono text-center theme-text-secondary">Cert No: 489727</p>
+                            <p class="text-[11px] font-mono text-center font-semibold theme-text-muted">Cert No: 489727</p>
                         </div>
 
                         <!-- Main Content -->
                         <div class="flex-1 space-y-3 w-full">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                                 <div>
-                                    <h3 class="text-lg font-bold theme-text-primary">Applied AI &amp; Machine Learning Trainee</h3>
-                                    <p class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Centre for Professional Enhancement (LPU)</p>
+                                    <h3 class="text-lg font-extrabold theme-text-primary">Applied AI &amp; Machine Learning Trainee</h3>
+                                    <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Centre for Professional Enhancement (LPU)</p>
                                 </div>
-                                <span class="text-xs font-mono text-emerald-700 dark:text-emerald-400 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 self-start sm:self-auto font-bold">
+                                <span class="text-xs font-mono text-emerald-700 dark:text-emerald-400 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 self-start sm:self-auto font-extrabold">
                                     Grade ‘A’ Merit &bull; Jun’ 26 – Jul’ 26
                                 </span>
                             </div>
 
-                            <ul class="space-y-2 text-sm theme-text-secondary list-disc list-inside leading-relaxed">
+                            <ul class="space-y-2 text-sm theme-text-secondary font-medium list-disc list-inside leading-relaxed">
                                 <li>Executed high-dimensional exploratory data analysis (EDA), anomaly detection, and data cleansing on structured datasets with Pandas &amp; NumPy.</li>
                                 <li>Trained, evaluated, and hyperparameter-tuned predictive regression, classification, and clustering models using Scikit-learn, yielding a 20% improvement in baseline evaluation metrics.</li>
                                 <li>Awarded distinguished <strong>Grade ‘A’</strong> merit certification for capstone performance.</li>
                             </ul>
 
                             <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Python</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Scikit-learn</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Pandas</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">NumPy</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Python</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Scikit-learn</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Pandas</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">NumPy</span>
                             </div>
                         </div>
 
@@ -515,30 +521,30 @@
                                     Training
                                 </span>
                             </div>
-                            <p class="text-[11px] font-mono text-center theme-text-secondary">Industrial Training</p>
+                            <p class="text-[11px] font-mono text-center font-semibold theme-text-muted">Industrial Training</p>
                         </div>
 
                         <!-- Main Content -->
                         <div class="flex-1 space-y-3 w-full">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                                 <div>
-                                    <h3 class="text-lg font-bold theme-text-primary">Android Application Development using Kotlin</h3>
-                                    <p class="text-xs font-semibold theme-text-secondary">O7 Services (45 Days Industrial Training)</p>
+                                    <h3 class="text-lg font-extrabold theme-text-primary">Android Application Development using Kotlin</h3>
+                                    <p class="text-xs font-bold theme-text-muted">O7 Services (45 Days Industrial Training)</p>
                                 </div>
-                                <span class="text-xs font-mono theme-subtle-box border px-3 py-1 rounded-full self-start sm:self-auto font-medium">
+                                <span class="text-xs font-mono theme-subtle-box border px-3 py-1 rounded-full self-start sm:self-auto font-bold">
                                     Jun’ 25 – Jul’ 25
                                 </span>
                             </div>
 
-                            <p class="text-sm theme-text-secondary leading-relaxed">
+                            <p class="text-sm theme-text-secondary font-medium leading-relaxed">
                                 Developed native Android UI employing XML layouts, ViewBinding, and Firebase authentication protocols.
                             </p>
 
                             <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Kotlin</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Android SDK</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">ViewBinding</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box">Firebase</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Kotlin</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Android SDK</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">ViewBinding</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md theme-subtle-box font-semibold">Firebase</span>
                             </div>
                         </div>
 
@@ -554,16 +560,16 @@
         <section id="projects" class="space-y-8 pt-4 border-t theme-border-divide">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div class="space-y-1">
-                    <span class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Portfolio</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold theme-text-primary tracking-tight">Featured Projects</h2>
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Portfolio</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold theme-text-primary tracking-tight">Featured Projects</h2>
                 </div>
 
                 <!-- Solid Filter Tabs with High Contrast -->
                 <div class="flex flex-wrap gap-2 text-xs font-mono">
-                    <button class="filter-btn active px-4 py-1.5 rounded-full border font-semibold shadow-sm" data-filter="all">All</button>
-                    <button class="filter-btn px-4 py-1.5 rounded-full border font-semibold shadow-sm" data-filter="ai">AI &amp; Vision</button>
-                    <button class="filter-btn px-4 py-1.5 rounded-full border font-semibold shadow-sm" data-filter="mobile">Android</button>
-                    <button class="filter-btn px-4 py-1.5 rounded-full border font-semibold shadow-sm" data-filter="civic">Civic Tech</button>
+                    <button class="filter-btn active px-4 py-1.5 rounded-full border font-bold shadow-sm" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-1.5 rounded-full border font-bold shadow-sm" data-filter="ai">AI &amp; Vision</button>
+                    <button class="filter-btn px-4 py-1.5 rounded-full border font-bold shadow-sm" data-filter="mobile">Android</button>
+                    <button class="filter-btn px-4 py-1.5 rounded-full border font-bold shadow-sm" data-filter="civic">Civic Tech</button>
                 </div>
             </div>
 
@@ -573,35 +579,35 @@
                 <div class="project-card p-6 rounded-2xl theme-card border space-y-4 flex flex-col justify-between group" data-category="ai">
                     <div class="space-y-3">
                         <div class="flex items-start justify-between">
-                            <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500">
+                            <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-600 dark:text-brand-400">
                                 <i class="fas fa-brain text-lg"></i>
                             </div>
-                            <span class="text-xs font-mono theme-subtle-box border px-2.5 py-0.5 rounded-full font-medium">May’ 26</span>
+                            <span class="text-xs font-mono theme-subtle-box border px-2.5 py-0.5 rounded-full font-bold">May’ 26</span>
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-bold theme-text-primary group-hover:text-brand-500 transition-colors">FitBuddy AI</h3>
-                            <p class="text-xs font-mono theme-text-secondary">Vision Kinematic Fitness Assistant</p>
+                            <h3 class="text-xl font-extrabold theme-text-primary group-hover:text-brand-500 transition-colors">FitBuddy AI</h3>
+                            <p class="text-xs font-mono font-semibold theme-text-muted">Vision Kinematic Fitness Assistant</p>
                         </div>
 
-                        <p class="text-sm theme-text-secondary leading-relaxed">
+                        <p class="text-sm theme-text-secondary font-medium leading-relaxed">
                             Computer vision posture analysis system using MediaPipe 33-point skeletal landmark detection and an LSTM neural network, achieving 94%+ accuracy. Features real-time joint angle calculations, synthesized audio feedback, and &lt;35ms frame inference.
                         </p>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Python</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">MediaPipe</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">OpenCV</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">TensorFlow/LSTM</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Firebase</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Python</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">MediaPipe</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">OpenCV</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">TensorFlow/LSTM</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Firebase</span>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-3 pt-4 border-t theme-border-divide">
-                        <a href="https://fitbuddy-ai-35982.web.app/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-xs transition-colors shadow-sm shadow-brand-500/20">
+                        <a href="https://fitbuddy-ai-35982.web.app/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs transition-colors shadow-sm shadow-brand-500/20">
                             <i class="fas fa-arrow-up-right-from-square mr-1"></i> Live Demo
                         </a>
-                        <a href="https://github.com/Deepali-19/fitbuddy-ai" target="_blank" class="px-4 py-2.5 rounded-xl theme-subtle-box border theme-text-primary text-xs font-medium transition-colors">
+                        <a href="https://github.com/Deepali-19/fitbuddy-ai" target="_blank" class="px-4 py-2.5 rounded-xl theme-subtle-box border theme-text-primary text-xs font-bold transition-colors">
                             <i class="fab fa-github mr-1"></i> GitHub
                         </a>
                     </div>
@@ -614,28 +620,28 @@
                             <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                                 <i class="fas fa-map-location-dot text-lg"></i>
                             </div>
-                            <span class="text-xs font-mono theme-subtle-box border px-2.5 py-0.5 rounded-full font-medium">Apr’ 26</span>
+                            <span class="text-xs font-mono theme-subtle-box border px-2.5 py-0.5 rounded-full font-bold">Apr’ 26</span>
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-bold theme-text-primary group-hover:text-emerald-500 transition-colors">UrbanFix</h3>
-                            <p class="text-xs font-mono theme-text-secondary">Cloud Municipal Grievance Redressal</p>
+                            <h3 class="text-xl font-extrabold theme-text-primary group-hover:text-emerald-500 transition-colors">UrbanFix</h3>
+                            <p class="text-xs font-mono font-semibold theme-text-muted">Cloud Municipal Grievance Redressal</p>
                         </div>
 
-                        <p class="text-sm theme-text-secondary leading-relaxed">
+                        <p class="text-sm theme-text-secondary font-medium leading-relaxed">
                             Full-stack civic platform integrating Google Maps SDK for geospatial issue tracking, automated department routing, and real-time status updates with Firebase Cloud Messaging (FCM), cutting grievance cycles by 40%.
                         </p>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">JavaScript</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Google Maps API</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Firestore</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Cloud Functions</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">JavaScript</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Google Maps API</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Firestore</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Cloud Functions</span>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-3 pt-4 border-t theme-border-divide">
-                        <a href="https://github.com/Deepali-19/UrbanFix" target="_blank" class="w-full text-center py-2.5 rounded-xl theme-subtle-box border theme-text-primary text-xs font-medium hover:border-brand-500 transition-colors">
+                        <a href="https://github.com/Deepali-19/UrbanFix" target="_blank" class="w-full text-center py-2.5 rounded-xl theme-subtle-box border theme-text-primary text-xs font-bold hover:border-brand-500 transition-colors">
                             <i class="fab fa-github mr-1.5"></i> View Repository
                         </a>
                     </div>
@@ -645,31 +651,31 @@
                 <div class="project-card p-6 rounded-2xl theme-card border space-y-4 flex flex-col justify-between group" data-category="mobile">
                     <div class="space-y-3">
                         <div class="flex items-start justify-between">
-                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-500">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
                                 <i class="fab fa-android text-lg"></i>
                             </div>
-                            <span class="text-xs font-mono theme-subtle-box border px-2.5 py-0.5 rounded-full font-medium">Mar’ 26</span>
+                            <span class="text-xs font-mono theme-subtle-box border px-2.5 py-0.5 rounded-full font-bold">Mar’ 26</span>
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-bold theme-text-primary group-hover:text-indigo-500 transition-colors">UrbanFix Civilian</h3>
-                            <p class="text-xs font-mono theme-text-secondary">Offline-First Native Android Client</p>
+                            <h3 class="text-xl font-extrabold theme-text-primary group-hover:text-indigo-500 transition-colors">UrbanFix Civilian</h3>
+                            <p class="text-xs font-mono font-semibold theme-text-muted">Offline-First Native Android Client</p>
                         </div>
 
-                        <p class="text-sm theme-text-secondary leading-relaxed">
+                        <p class="text-sm theme-text-secondary font-medium leading-relaxed">
                             Native Android application built on MVVM architecture with Room Database and SQLite for offline caching. Uses CameraX for compressed geotagged photo evidence capture and background synchronization.
                         </p>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Kotlin</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Android Jetpack</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Room DB</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">CameraX</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Kotlin</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Android Jetpack</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Room DB</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">CameraX</span>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-3 pt-4 border-t theme-border-divide">
-                        <a href="https://github.com/Deepali-19/UrbanFix-Civilian" target="_blank" class="w-full text-center py-2.5 rounded-xl theme-subtle-box border theme-text-primary text-xs font-medium hover:border-brand-500 transition-colors">
+                        <a href="https://github.com/Deepali-19/UrbanFix-Civilian" target="_blank" class="w-full text-center py-2.5 rounded-xl theme-subtle-box border theme-text-primary text-xs font-bold hover:border-brand-500 transition-colors">
                             <i class="fab fa-github mr-1.5"></i> View Repository
                         </a>
                     </div>
@@ -679,31 +685,31 @@
                 <div class="project-card p-6 rounded-2xl theme-card border space-y-4 flex flex-col justify-between group" data-category="mobile">
                     <div class="space-y-3">
                         <div class="flex items-start justify-between">
-                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400">
                                 <i class="fas fa-barcode text-lg"></i>
                             </div>
-                            <span class="text-xs font-mono text-amber-600 dark:text-amber-400 px-2.5 py-0.5 rounded-full bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 font-bold">In Development</span>
+                            <span class="text-xs font-mono text-amber-700 dark:text-amber-400 px-2.5 py-0.5 rounded-full bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 font-bold">In Development</span>
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-bold theme-text-primary group-hover:text-amber-500 transition-colors">Scannova</h3>
-                            <p class="text-xs font-mono theme-text-secondary">Mobile Self-Checkout Engine</p>
+                            <h3 class="text-xl font-extrabold theme-text-primary group-hover:text-amber-500 transition-colors">Scannova</h3>
+                            <p class="text-xs font-mono font-semibold theme-text-muted">Mobile Self-Checkout Engine</p>
                         </div>
 
-                        <p class="text-sm theme-text-secondary leading-relaxed">
+                        <p class="text-sm theme-text-secondary font-medium leading-relaxed">
                             Automated retail barcode ingestion system leveraging Google ML Kit to eliminate supermarket queue delays with instant shopping cart calculation, dynamic tax evaluation, and digital receipt creation.
                         </p>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Kotlin</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">ML Kit</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Room DB</span>
-                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box">Android Studio</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Kotlin</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">ML Kit</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Room DB</span>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded theme-subtle-box font-semibold">Android Studio</span>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-3 pt-4 border-t theme-border-divide">
-                        <span class="w-full text-center py-2.5 rounded-xl theme-subtle-box text-xs font-mono opacity-75">
+                        <span class="w-full text-center py-2.5 rounded-xl theme-subtle-box text-xs font-mono font-bold">
                             <i class="fas fa-code mr-1"></i> Active Development
                         </span>
                     </div>
@@ -713,12 +719,12 @@
         </section>
 
         <!-- =========================================================================
-             7. EDUCATION SECTION (Honours Removed)
+             7. EDUCATION SECTION
              ========================================================================= -->
         <section id="education" class="space-y-8 pt-4 border-t theme-border-divide">
             <div class="space-y-1">
-                <span class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Academics</span>
-                <h2 class="text-2xl sm:text-3xl font-bold theme-text-primary tracking-tight">Education &amp; Qualifications</h2>
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Academics</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold theme-text-primary tracking-tight">Education &amp; Qualifications</h2>
             </div>
 
             <div class="space-y-4">
@@ -726,45 +732,45 @@
                 <!-- Degree 1 -->
                 <div class="p-6 rounded-2xl theme-card border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div class="space-y-1">
-                        <h3 class="text-base font-bold theme-text-primary">Lovely Professional University (Phagwara, Punjab)</h3>
-                        <p class="text-sm text-brand-500 font-medium">Bachelor of Technology (B.Tech) — Computer Science and Engineering (Lateral Entry)</p>
-                        <p class="text-xs theme-text-secondary">Data Structures (C++), Operating Systems, DBMS, Computer Networks, Software Engineering</p>
+                        <h3 class="text-base font-extrabold theme-text-primary">Lovely Professional University (Phagwara, Punjab)</h3>
+                        <p class="text-sm text-brand-600 dark:text-brand-400 font-bold">Bachelor of Technology (B.Tech) — Computer Science and Engineering (Lateral Entry)</p>
+                        <p class="text-xs theme-text-muted font-medium">Data Structures (C++), Operating Systems, DBMS, Computer Networks, Software Engineering</p>
                     </div>
                     <div class="text-right self-start sm:self-auto">
-                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200 dark:border-brand-500/20 font-bold">
+                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-500/10 text-brand-700 dark:text-brand-400 border border-brand-200 dark:border-brand-500/20 font-bold">
                             Aug’ 26 – Present
                         </span>
-                        <p class="text-xs theme-text-secondary mt-1">Currently Pursuing</p>
+                        <p class="text-xs theme-text-muted font-bold mt-1">Currently Pursuing</p>
                     </div>
                 </div>
 
-                <!-- Degree 2 (Honours removed -> First Division) -->
+                <!-- Degree 2 -->
                 <div class="p-6 rounded-2xl theme-card border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div class="space-y-1">
-                        <h3 class="text-base font-bold theme-text-primary">Lovely Professional University (Phagwara, Punjab)</h3>
-                        <p class="text-sm theme-text-primary font-medium">Diploma in Computer Science and Engineering</p>
-                        <p class="text-xs theme-text-secondary">Object-Oriented Programming, C Data Structures, Relational DBMS, Linux, Mobile App Basics</p>
+                        <h3 class="text-base font-extrabold theme-text-primary">Lovely Professional University (Phagwara, Punjab)</h3>
+                        <p class="text-sm theme-text-primary font-bold">Diploma in Computer Science and Engineering</p>
+                        <p class="text-xs theme-text-muted font-medium">Object-Oriented Programming, C Data Structures, Relational DBMS, Linux, Mobile App Basics</p>
                     </div>
                     <div class="text-right self-start sm:self-auto">
-                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-500/20 font-bold">
+                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-500/20 font-extrabold">
                             First Division
                         </span>
-                        <p class="text-xs theme-text-secondary mt-1">Aug’ 23 – May’ 26</p>
+                        <p class="text-xs theme-text-muted font-bold mt-1">Aug’ 23 – May’ 26</p>
                     </div>
                 </div>
 
                 <!-- Degree 3 -->
                 <div class="p-6 rounded-2xl theme-card border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div class="space-y-1">
-                        <h3 class="text-base font-bold theme-text-primary">National Institute of Open Schooling (NIOS, India)</h3>
-                        <p class="text-sm theme-text-primary font-medium">Senior Secondary (Class XII) — Science &amp; Mathematics</p>
-                        <p class="text-xs theme-text-secondary">Science &amp; Mathematics curriculum focusing on analytical logic and problem solving</p>
+                        <h3 class="text-base font-extrabold theme-text-primary">National Institute of Open Schooling (NIOS, India)</h3>
+                        <p class="text-sm theme-text-primary font-bold">Senior Secondary (Class XII) — Science &amp; Mathematics</p>
+                        <p class="text-xs theme-text-muted font-medium">Science &amp; Mathematics curriculum focusing on analytical logic and problem solving</p>
                     </div>
                     <div class="text-right self-start sm:self-auto">
-                        <span class="text-xs font-mono px-3 py-1 rounded-full theme-subtle-box border font-bold">
+                        <span class="text-xs font-mono px-3 py-1 rounded-full theme-subtle-box border font-extrabold">
                             First Division
                         </span>
-                        <p class="text-xs theme-text-secondary mt-1">2023 – 2024</p>
+                        <p class="text-xs theme-text-muted font-bold mt-1">2023 – 2024</p>
                     </div>
                 </div>
 
@@ -772,30 +778,30 @@
         </section>
 
         <!-- =========================================================================
-             8. SKILLS ARSENAL (All Soft Skills Pills Match the Same Uniform Style & Color)
+             8. SKILLS ARSENAL (High-Contrast Pills)
              ========================================================================= -->
         <section id="skills" class="space-y-8 pt-4 border-t theme-border-divide">
             <div class="space-y-1">
-                <span class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Arsenal</span>
-                <h2 class="text-2xl sm:text-3xl font-bold theme-text-primary tracking-tight">Technical Skills</h2>
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Arsenal</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold theme-text-primary tracking-tight">Technical Skills</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Category 1: Languages -->
                 <div class="p-6 rounded-2xl theme-card border space-y-4">
-                    <div class="flex items-center gap-2.5 text-brand-500 font-bold">
+                    <div class="flex items-center gap-2.5 text-brand-600 dark:text-brand-400 font-bold">
                         <i class="fas fa-code text-lg"></i>
-                        <h3 class="theme-text-primary text-base">Languages</h3>
+                        <h3 class="theme-text-primary text-base font-extrabold">Languages</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">C++</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Python</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Kotlin</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Java</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">C</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">SQL</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">JavaScript</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">C++</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Python</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Kotlin</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Java</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">C</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">SQL</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">JavaScript</span>
                     </div>
                 </div>
 
@@ -803,49 +809,49 @@
                 <div class="p-6 rounded-2xl theme-card border space-y-4">
                     <div class="flex items-center gap-2.5 text-emerald-600 dark:text-emerald-400 font-bold">
                         <i class="fas fa-brain text-lg"></i>
-                        <h3 class="theme-text-primary text-base">AI &amp; Vision</h3>
+                        <h3 class="theme-text-primary text-base font-extrabold">AI &amp; Vision</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">MediaPipe</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">TensorFlow</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">OpenCV</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Scikit-learn</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">LSTM Networks</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Pandas &amp; NumPy</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">MediaPipe</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">TensorFlow</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">OpenCV</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Scikit-learn</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">LSTM Networks</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Pandas &amp; NumPy</span>
                     </div>
                 </div>
 
                 <!-- Category 3: Tools & Platforms -->
                 <div class="p-6 rounded-2xl theme-card border space-y-4">
-                    <div class="flex items-center gap-2.5 text-indigo-500 font-bold">
+                    <div class="flex items-center gap-2.5 text-indigo-600 dark:text-indigo-400 font-bold">
                         <i class="fas fa-layer-group text-lg"></i>
-                        <h3 class="theme-text-primary text-base">Mobile &amp; Frameworks</h3>
+                        <h3 class="theme-text-primary text-base font-extrabold">Mobile &amp; Frameworks</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Android Studio (MVVM)</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Room DB</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">CameraX</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Firebase</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Git &amp; GitHub</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Docker &amp; Linux</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Android Studio (MVVM)</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Room DB</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">CameraX</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Firebase</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Git &amp; GitHub</span>
+                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono font-bold">Docker &amp; Linux</span>
                     </div>
                 </div>
 
-                <!-- Category 4: Soft Skills (ATS - Exact Same Clean Matching Style & Color) -->
+                <!-- Category 4: Soft Skills (ATS - High Contrast) -->
                 <div class="p-6 rounded-2xl theme-card border space-y-4 md:col-span-2 lg:col-span-3">
-                    <div class="flex items-center gap-2.5 text-amber-500 font-bold">
+                    <div class="flex items-center gap-2.5 text-amber-600 dark:text-amber-400 font-bold">
                         <i class="fas fa-users text-lg"></i>
-                        <h3 class="theme-text-primary text-base">Core Competencies &amp; Soft Skills</h3>
+                        <h3 class="theme-text-primary text-base font-extrabold">Core Competencies &amp; Soft Skills</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Data Structures &amp; Algorithms</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Object-Oriented Architecture</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Relational DBMS</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Problem-Solving</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Analytical Thinking</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Cross-Functional Team Collaboration</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Agile Methodologies</span>
-                        <span class="px-3 py-1 rounded-lg theme-subtle-box text-xs font-mono">Adaptability</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Data Structures &amp; Algorithms</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Object-Oriented Architecture</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Relational DBMS</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Problem-Solving</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Analytical Thinking</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Cross-Functional Team Collaboration</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Agile Methodologies</span>
+                        <span class="px-3 py-1.5 rounded-lg theme-subtle-box text-xs font-mono font-bold">Adaptability</span>
                     </div>
                 </div>
 
@@ -858,11 +864,11 @@
         <section id="contact" class="pt-4 border-t theme-border-divide">
             <div class="p-8 sm:p-12 rounded-3xl theme-card border text-center space-y-6 relative overflow-hidden">
                 <div class="space-y-2 max-w-xl mx-auto">
-                    <span class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Get In Touch</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold theme-text-primary tracking-tight">
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold theme-text-primary tracking-tight">
                         Have a project in mind? Let's build something together.
                     </h2>
-                    <p class="theme-text-secondary text-sm sm:text-base leading-relaxed pt-1">
+                    <p class="theme-text-secondary text-sm sm:text-base font-medium leading-relaxed pt-1">
                         I'm currently seeking software engineering internships, AI/ML research opportunities, and collaborative builds. Feel free to reach out directly.
                     </p>
                 </div>
@@ -871,12 +877,12 @@
                     <a href="mailto:deepalis1003@gmail.com" class="px-8 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm transition-all shadow-lg shadow-brand-500/25 flex items-center gap-2">
                         <i class="fas fa-envelope"></i> deepalis1003@gmail.com
                     </a>
-                    <a href="tel:+9191119152143" class="px-6 py-3.5 rounded-xl theme-subtle-box border theme-text-primary font-medium text-sm transition-all flex items-center gap-2">
+                    <a href="tel:+9191119152143" class="px-6 py-3.5 rounded-xl theme-subtle-box border theme-text-primary font-bold text-sm transition-all flex items-center gap-2">
                         <i class="fas fa-phone text-xs text-brand-500"></i> +91 911191 - 52143
                     </a>
                 </div>
 
-                <div class="flex items-center justify-center gap-4 pt-4 text-sm font-medium theme-text-secondary">
+                <div class="flex items-center justify-center gap-4 pt-4 text-sm font-bold theme-text-secondary">
                     <a href="https://www.linkedin.com/in/deepali-singh19" target="_blank" class="hover:text-brand-500 transition-colors">LinkedIn</a>
                     <span>&bull;</span>
                     <a href="https://github.com/Deepali-19" target="_blank" class="hover:text-brand-500 transition-colors">GitHub</a>
@@ -897,12 +903,12 @@
                 <i class="fas fa-xmark"></i>
             </button>
             <img id="certModalImg" src="" alt="Certificate Preview" class="w-full max-h-[75vh] object-contain rounded-xl">
-            <p id="certModalCaption" class="text-xs font-mono text-slate-300 text-center pt-3 pb-1"></p>
+            <p id="certModalCaption" class="text-xs font-mono text-slate-300 text-center pt-3 pb-1 font-semibold"></p>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="max-w-5xl mx-auto px-6 py-8 border-t theme-border-divide flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono theme-text-secondary">
+    <footer class="max-w-5xl mx-auto px-6 py-8 border-t theme-border-divide flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono font-bold theme-text-muted">
         <div>&copy; 2026 Deepali Singh &bull; Building with Quality &amp; Precision</div>
         <a href="#hero" class="hover:text-brand-500 transition-colors flex items-center gap-1">
             Back To Top <i class="fas fa-arrow-up text-[10px]"></i>
