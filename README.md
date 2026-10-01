@@ -14,7 +14,7 @@
   - Dark mode (Deep midnight canvas with indigo glow & high-contrast glassmorphism)
   - 3D Tilt interactive portrait card (VanillaTilt)
   - Interactive Project Category filtering (All, AI & Vision, Android, Civic Tech)
-  - Certificate Lightbox preview modals (SSS Patna, LPU CPE Grade 'A', O7 Services)
+  - Certificate Lightbox preview modals (SSS Patna, LPU CPE Grade 'O' (Outstanding), O7 Services)
   - Responsive across all mobile, tablet, and desktop breakpoints
 
 ---
